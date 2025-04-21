@@ -45,9 +45,16 @@ struct ChatView: View {
                     .textFieldStyle(.roundedBorder)
                 Button("Отправить") {
                     viewModel.sendMessage()
+                    viewModel.inputText = ""
                 }
             }
             .padding()
         }
+    }
+}
+
+struct ChatView_Previews: PreviewProvider {
+    static var previews: some View {
+        ChatView()
     }
 }
